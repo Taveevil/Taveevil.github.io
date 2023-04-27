@@ -14,61 +14,80 @@ font-style: normal;
     box-sizing: border-box
 }
 
-h1{
+h1, .nav-title{
     font-family: futura-pt, sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     font-size:3rem;
 }
 
-.title {
-    border:none;
-    background: transparent;
-
+.navbar{
+    padding:0 !important;
+    margin:0;
 }
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.navbar-toggler:hover {
+   border: none !important;
+   outline: none !important;
+   box-shadow: none !important;
+   background: transparent !important;
+}
+
+.nav-title a{
+    font-size:2rem;
+    padding:0.5rem;
+    text-decoration: none;
+}
+
+#navigation{
+    display:flex;
+
+    border-bottom:solid black 2px;
+}
+
+#nav-links{
+    justify-content: flex-end;
+}
+
 
 .links{
     display:flex;
-    height:100%;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.links a{
+    flex-direction:row;
     font-family: "playfair-display", serif;
     font-weight: 400;
     font-style: normal;
-    font-size:1.5rem;
-    margin:auto 0.5rem;
-
-    text-decoration: none;
-    color:black;        
+    font-size: 1.5rem;
 }
 
-.links a:hover{
-    font-weight: 600;
+a{
+    margin: auto 0.5rem;
     text-decoration: none;
-    color:black;        
+    color: black !important;
+    text-shadow: -.25px -.25px 0 transparent,
+        .25px .25px transparent;
+    margin: 0 4px;
+    cursor:pointer;
+}
+
+a:hover {
+    text-shadow: -.25px -.25px 0 black,
+        .25px .25px black;
 }
 
 .active a{
     font-weight:bolder;
 }
 
-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:solid black 2px;
-    padding:0.5rem;
-}
-
 .hamburger-icon{
     display:none;
     position:relative;
     margin:0 1rem;
-    height:5vw;
-    width:5vw;
+    height:50px;
+    width:50px;
     border:0;
     background-color: transparent;
 }
@@ -111,4 +130,57 @@ nav{
 
 .bottom-bar{
     margin-top:33%;
+}
+
+.seperator{
+    background-color:black;
+    height:2px;
+    width:100%;
+}
+
+.footer-section{
+    display:flex;
+    flex-direction:column;
+}
+
+#footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:0.5rem 0;
+    flex:1;
+}
+
+footer{
+    height:fit-content
+}
+
+footer h3{
+    font-family: "playfair-display", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+#footer-links a{
+    color:white;
+    text-decoration: none;
+}
+
+@media screen and (max-width:960px) {
+
+    #nav-links{
+        border-top:solid black 2px;
+    }
+    
+    .links{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .hamburger-icon{
+        display:block;
+    }
 }

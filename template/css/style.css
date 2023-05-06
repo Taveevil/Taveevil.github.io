@@ -19,7 +19,7 @@ body{
     overflow-x:hidden;
 }
 
-h1,h3, .nav-title,#work-title{
+h1,h3, .nav-title, #work-title{
     font-family: futura-pt, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -378,31 +378,34 @@ a, a:link, a:visited{
     margin-top:3rem;
 }
 
-#work-button:hover,
-#about-button:hover {
+.solid-button:hover,
+.border-button:hover {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
     transform:scaleX(102%);
 }
 
-#about-button:hover{
+.solid-button a:hover{
     color:var(--main-color);
 }
 
-#work-button,
-#about-button{
+.solid-button,
+.border-button{
     padding:1rem 2rem;
     border-radius: 20px;
     transition:all 200ms ease-in-out;
 }
 
-#work-button{
-    color:var(--sub-color);
+.solid-button{
+    color:var(--sub-color) !important;
     border:none;
+    text-decoration: none;
     background-color: var(--main-color);
 }
 
-#about-button{
+.border-button{
     margin-left:0.5rem;
+    color:var(--main-color) !important;
+    text-decoration: none;
     border:solid 2px black;
     background-color: var(--sub-color);
 }
@@ -413,12 +416,29 @@ a, a:link, a:visited{
     height:100vh;
 }
 
-#work-copy{
-    margin:auto auto;
+#work-content{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
     padding:5%;
+}
+
+#work-copy{
     transition: all 200ms ease-in-out;
 }
 
+#work-title{
+    font-size:2rem;
+}
+
+#work-subtitle{
+    font-size:1rem;
+}
+
+#contact-button{
+    margin-top:1rem;
+}
 
 .fade-left{
     transform: translateY(-10%);

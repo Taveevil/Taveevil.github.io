@@ -84,31 +84,32 @@ layers.forEach((element) => {
 
 
 var Anchors = document.getElementsByTagName("a");
-var layers = document.querySelectorAll('.solid');
+var layers = document.querySelectorAll(".solid");
 
 //Check how many a tags there are
 //and store them into an array
 for (var i = 0; i < Anchors.length; i++) {
-  //if any of the links are clicked then run the event 
+  //if any of the links are clicked then run the event
   Anchors[i].addEventListener(
     "click",
     function (event) {
-      //stop the link from instantly switching pages
-      event.preventDefault();
-      //get the link of the anchor
-      var linkLocation = this.href
-      //run the transition animation
-      layers.forEach((element) => {
-        element.style.opacity="100%";
-        element.style.zIndex="999";
-        element.classList.add("active");
-      });
-      //then after 900ms switch pages
-      setTimeout(function () {
-        window.location = linkLocation;
-      }, 900);
-    },
-    false
+      if (!this.classList.contains('external')) {
+              //stop the link from instantly switching pages
+              event.preventDefault();
+              //get the link of the anchor
+              var linkLocation = this.href;
+              //run the transition animation
+              layers.forEach((element) => {
+                element.style.opacity = "100%";
+                element.style.zIndex = "999";
+                element.classList.add("active");
+              });
+              //then after 900ms switch pages
+              setTimeout(function () {
+                window.location = linkLocation;
+              }, 900);
+      }
+    }
   );
 }
 
@@ -119,12 +120,12 @@ var work_title = document.getElementById('work-title');
 var work_sub = document.getElementById('work-sub');
 var work_description = document.getElementById('work-description');
 
-var subtitle_array = 
-['this is a test',
+var title_array = 
+['Expressing creativity,\ one design at a time',
 'fuck u', 
 'bruh']
 
-var title_array = 
+var subtitle_array = 
 ['all',
 'Site12',
 'Apparel design',
@@ -132,8 +133,7 @@ var title_array =
 'side projects']
 
 description_array =
-[
-
+['Welcome to my design portfolio, where creativity meets pixel-perfection. Let\'s bring your ideas to life!'
 ]
 
 for (var i=0; i < sub_btn.length; i++){

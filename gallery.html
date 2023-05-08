@@ -18,7 +18,65 @@
         <div class="solid layer-2 active"></div>
         <div class="solid layer-3 active"></div>
     </div>
-    <nav class="navbar navbar-expand-lg">
+
+    <div class="album modal" id="album-1">
+        <div class="album-content">
+        <div class="album-body">
+            <div class="album-controls">
+            <a class="close external" href="#">Close</a>
+            <a class="previous-slide slide-control external"><i class="arrow left"></i></a>
+            <div class="album-images">
+                <div class = "slide"><img class="slide-image" src="https://placehold.jp/150x150.png" alt=""></div>
+                <div class = "slide"><img class="slide-image" src="https://placehold.jp/150x150.png" alt=""></div>
+                <div class = "slide"><img  class="slide-image" src="https://placehold.jp/150x150.png" alt=""></div>
+            </div>
+            <a class="next-slide slide-control external"><i class="arrow right"></a></i></a>
+        </div>
+        </div>
+        <div class="album-sub">
+        <h2>Album 1</h2>
+            <div class="dots">
+                <div class="slide-preview">
+                    <img class="modal-preview" src="https://placehold.jp/150x150.png" alt="">
+                </div>
+                <div class="slide-preview">
+                    <img class="modal-preview" src="https://placehold.jp/150x150.png" alt="">
+                </div>
+                <div class="slide-preview">
+                    <img class="modal-preview" src="https://placehold.jp/150x150.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="album modal" id="album-2">
+    <div class="album-content">
+    <div class="album-body">
+        <div class="album-controls">
+        <a class="close external" href="#">Close</a>
+        <a class="previous-slide slide-control external"><i class="arrow left"></i></a>
+        <div class="album-images">
+            <div class = "slide"><img class="slide-image" src="https://placehold.jp/150x150.png" alt=""></div>
+            <div class = "slide"><img class="slide-image" src="https://placehold.jp/150x150.png" alt=""></div>
+        </div>
+        <a class="next-slide slide-control external"><i class="arrow right"></a></i></a>
+    </div>
+    </div>
+    <div class="album-sub">
+    <h2>Album 2</h2>
+        <div class="dots">
+            <div class="slide-preview">
+                <img class="modal-preview" src="https://placehold.jp/150x150.png" alt="">
+            </div>
+            <div class="slide-preview">
+                <img class="modal-preview" src="https://placehold.jp/150x150.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <nav class="autohide navbar navbar-expand-lg">
         <div id="navigation" class="container-fluid g-0">
             <div class="nav-title">
                 <a href="/index.html"><img src="template/img/Tav-black.svg"></a>
@@ -33,16 +91,16 @@
             </button>
             <div class="collapse navbar-collapse" id="nav-links">
                 <div class="links">
-                    <a class="home nav-link" href="/index.html">home</a>
-                    <a class="work nav-link active" href="/work.html">work</a>
-                    <a class="about nav-link" href="/about.html">about</a>
+                    <a class="projects nav-link" href="/projects.html">projects</a>
+                    <a class="gallery nav-link" href="/gallery.html">gallery</a>
+                    <a class="about nav-link active" href="/about.html">about</a>
                 </div>
             </div>
         </div>
     </nav>
-
+    <div class="container-fluid">
     <div id="work" class="row">
-        <div id="sub-nav" class="container-fluid">
+        <div id="sub-nav" > 
             <div class="sub-links">
                 <input type='radio' id="all" name="sub" class="sub-btn" value="all" checked/><label
                     for="all">All</label>
@@ -68,11 +126,48 @@
         <div id="menu-scroll" class="col-md-7 col-sm-12">
             <div class="thumb-set row row-cols-2">
                 <div class="col-5 thumbnail site12">
-                    <a>
-                        <img src="/template/img/me.jpg">
-                        <div class="thumb-description">
+                    <a class="album-trigger external" href="#" data-target="album-1">
+                        <img class="thumb-img" src="/template/img/me.jpg" alt="">
+                        <div class="thumb-copy">
                             <h4>Stuff</h4>
-                            <div class="description">
+                            <div class="thumb-description">
+                                <p>description</p>
+                            </div>
+                        </div>
+                        </img>
+                    </a>
+                
+                </div>
+                <div class="col-5 thumbnail apparel">
+                    <a class="album-trigger external" href="#" data-target="album-2">
+                        <img class="thumb-img" src="">
+                        <div class="thumb-copy">
+                            <h4>Stuff</h4>
+                            <div class="thumb-description">
+                                <p>description</p>
+                            </div>
+                        </div>
+                        </img>
+                    </a>
+                </div>
+                <div class="col-5 thumbnail vmd">
+                    <a href="">
+                        <img class="thumb-img" src="">
+                        <div class="thumb-copy">
+                            <h4>Stuff</h4>
+                            <div class="thumb-description">
+                                <p>description</p>
+                            </div>
+                        </div>
+                        </img>
+                    </a>
+                </div>
+                <div class="col-5 thumbnail side">
+                    <a href="">
+                        <img class="thumb-img" src="">
+                        <div class="thumb-copy">
+                            <h4>Stuff</h4>
+                            <div class="thumb-description">
                                 <p>description</p>
                             </div>
                         </div>
@@ -80,11 +175,11 @@
                     </a>
                 </div>
                 <div class="col-5 thumbnail">
-                    <a>
-                        <img src="">
-                        <div class="thumb-description">
+                    <a href="">
+                        <img class="thumb-img" src="">
+                        <div class="thumb-copy">
                             <h4>Stuff</h4>
-                            <div class="description">
+                            <div class="thumb-description">
                                 <p>description</p>
                             </div>
                         </div>
@@ -92,11 +187,11 @@
                     </a>
                 </div>
                 <div class="col-5 thumbnail">
-                    <a>
+                    <a href="">
                         <img src="">
-                        <div class="thumb-description">
+                        <div class="thumb-copy">
                             <h4>Stuff</h4>
-                            <div class="description">
+                            <div class="thumb-description">
                                 <p>description</p>
                             </div>
                         </div>
@@ -104,47 +199,11 @@
                     </a>
                 </div>
                 <div class="col-5 thumbnail">
-                    <a>
+                    <a href="">
                         <img src="">
-                        <div class="thumb-description">
+                        <div class="thumb-copy">
                             <h4>Stuff</h4>
-                            <div class="description">
-                                <p>description</p>
-                            </div>
-                        </div>
-                        </img>
-                    </a>
-                </div>
-                <div class="col-5 thumbnail">
-                    <a>
-                        <img src="">
-                        <div class="thumb-description">
-                            <h4>Stuff</h4>
-                            <div class="description">
-                                <p>description</p>
-                            </div>
-                        </div>
-                        </img>
-                    </a>
-                </div>
-                <div class="col-5 thumbnail">
-                    <a>
-                        <img src="">
-                        <div class="thumb-description">
-                            <h4>Stuff</h4>
-                            <div class="description">
-                                <p>description</p>
-                            </div>
-                        </div>
-                        </img>
-                    </a>
-                </div>
-                <div class="col-5 thumbnail">
-                    <a>
-                        <img src="">
-                        <div class="thumb-description">
-                            <h4>Stuff</h4>
-                            <div class="description">
+                            <div class="thumb-description">
                                 <p>description</p>
                             </div>
                         </div>
@@ -164,7 +223,8 @@
                         <div class="seperator"></div>
                         <div id="footer-navlinks" class="footer-links links">
                             <a href="/index.html">home</a>
-                            <a href="/about.html">about</a>
+                            <a href="/projects.html">projects</a>
+                            <a href="/gallery.html">about</a>
                             <a href="/work.html">work</a>
                         </div>
                         <div class="seperator"></div>
@@ -194,6 +254,7 @@
             </div>
         </footer>
     </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

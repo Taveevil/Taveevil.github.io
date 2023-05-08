@@ -183,7 +183,7 @@ for (var i=0; i < sub_btn.length; i++){
 thumb.forEach(element => {
   element.addEventListener('mouseover',() =>{ 
       element.classList.add('hovered')
-      element.querySelector('.description').classList.add('reveal');
+      element.querySelector('.thumb-description').classList.add('reveal');
     }
   )
 });
@@ -191,8 +191,90 @@ thumb.forEach(element => {
 thumb.forEach(element => {
   element.addEventListener('mouseout',() =>{ 
       element.classList.remove('hovered');
-      element.querySelector('.description').classList.remove('reveal');
+      element.querySelector('.thumb-description').classList.remove('reveal');
     }
   )
 });
+
+let slideIndex;
+var arr;
+// Define function to show album
+var showAlbum = function(id) {
+  slideIndex = 1;
+  document.getElementById(id).classList.add('visible');
+  arr=document.getElementById(id);
+  showSlide(slideIndex);
+
+  const previews =  Array.from(arr.getElementsByClassName('modal-preview'))
+  previews.forEach((e, index) => {
+  e.addEventListener("click", function () {
+    showSlide((slideIndex = index + 1));
+  });
+});
+}
+
+// Add click event listener to album triggers
+var albumTriggers = document.querySelectorAll('.album-trigger');
+albumTriggers.forEach(function(trigger) {
+  trigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    showAlbum(this.getAttribute('data-target'));
+  });
+});
+
+// Define function to close album
+var closeAlbum = function(elem) {
+  elem.parentNode.parentNode.parentNode.parentNode.classList.remove('visible');
+}
+
+// Add click event listener to close buttons
+var closeButtons = document.querySelectorAll('.close');
+closeButtons.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeAlbum(this);
+  });
+});
+
+var slide_control = document.querySelectorAll(".slide-control")
+
+slide_control.forEach((element) => {
+  element.addEventListener("click", function () {
+    if (element.classList.contains("previous-slide")) {
+      showSlide((slideIndex -= 1));
+    } else if (element.classList.contains("next-slide")) {
+      showSlide((slideIndex += 1));
+    }
+  });
+});
+
+
+
+// This is your logic for the light box. It will decide which slide to show 
+// and which dot is active.
+
+function showSlide(n) {
+  const slides = arr.getElementsByClassName('slide');
+  let modalPreviews = arr.getElementsByClassName('slide-preview');
+
+  if (n > slides.length) {
+    slideIndex = 1;	
+  };
+  
+  if (n < 1) {
+    slideIndex = slides.length;
+  };
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  };
+  
+  for (let i = 0; i < modalPreviews.length; i++) {
+    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+  };
+  
+  slides[slideIndex - 1].style.display = 'block';
+  modalPreviews[slideIndex - 1].className += ' active';
+};
+
 

@@ -181,11 +181,11 @@ a, a:link, a:visited{
     cursor:pointer;
 }
 
-.home.active{
+.projects.active{
     color:var(--accent-color1);
 }
 
-.about.active{
+.gallery.active{
     color:var(--accent-color3)
 }
 
@@ -193,13 +193,13 @@ a, a:link, a:visited{
     color:var(--accent-color2)
 }
 
-.home:hover {
+.projects:hover {
     color: var(--accent-color1) !important;
     text-shadow: -.25px -.25px 0 var(--accent-color1),
     .25px .25px var(--accent-color1) !important;
 }
 
-.work:hover{
+.gallery:hover{
     color: var(--accent-color2) !important;
     text-shadow: -.25px -.25px 0 var(--accent-color2),
     .25px .25px var(--accent-color2) !important;
@@ -410,7 +410,16 @@ a, a:link, a:visited{
     background-color: var(--sub-color);
 }
 
-/* WORK PAGE */
+/* PROJECTS PAGE */
+
+#projects{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* GALLERY PAGE */
 
 #work{
     height:100vh;
@@ -486,6 +495,7 @@ a, a:link, a:visited{
     object-position: center;
     height:100%;
     width:100%;
+    transition: all 300ms ease-in-out;
 }
 
 .fade{
@@ -496,13 +506,13 @@ a, a:link, a:visited{
     display:none;
 }
 
-.thumb-description{
+.thumb-copy{
     color:var(--sub-color);
     position:relative;
     z-index:2;
 }
 
-.description{
+.thumb-description{
     opacity:0%;
     transition:all 300ms ease-in-out;
     transform:translateY(10%)
@@ -518,7 +528,8 @@ a, a:link, a:visited{
 #sub-nav{
     position:relative;
     z-index:5;
-    height:3rem;
+    padding: 1rem;
+    height:fit-content;
     background-color:var(--accent-color2);
 }
 
@@ -545,8 +556,12 @@ a, a:link, a:visited{
 }
 
 .hovered{
-    transform:scale(102%) translateY(-5px);
+    transform:translateY(-5px);
     filter:drop-shadow(0 5px 5px rgba(0, 0, 0, 0.568));
+}
+
+.hovered img{
+    filter:brightness(70%);
 }
 
 .reveal{
@@ -554,6 +569,170 @@ a, a:link, a:visited{
     transform:translateY(0%);
 }
 
+.album{
+    background: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.modal{
+    overflow:hidden !important;
+}
+
+.album-body{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    flex-grow:2;
+}
+
+.album-controls{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.album.visible {
+    display: block;
+}
+
+.album-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+}
+
+.album h2 {
+    color: white;
+}
+
+.album img {
+    border: 5px solid white;
+}
+
+.album-sub{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height:fit-content;
+    flex:1;
+}
+
+.close, .close:visited{
+    position:fixed;
+    top:0;
+    right:0;
+    margin:1rem;
+    color:white;
+}
+
+.close:hover, .next-slide:hover, .previous-slide:hover{
+    color:var(--accent-color2);
+}
+
+.arrow {
+    border:solid;
+    border-width:0 5px 5px 0;
+    border-radius: 1px;
+    display:inline-block;
+    padding:5px;
+    transition:border-color 100ms ease-in-out;
+}
+
+
+.next-slide, .previous-slide{
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:50px;
+}
+
+.right{
+    transform: rotate(-45deg);
+}
+
+.left{
+    transform: rotate(135deg);
+}
+
+.dots{
+    display:flex;
+    justify-content: center;
+    height:40%;
+}
+
+.dots > *{
+    margin:0 0.5rem;
+}
+
+.slide{
+    display:none;
+}
+
+.slide-image{
+    margin:1rem;
+}
+
+.slide-preview img{
+    height:100%;
+    width:auto;
+    object-fit: contain;
+}
+
+.slide-preview{
+    filter: brightness(70%);
+    cursor:pointer;
+}
+
+.slide-preview.active {
+    filter: brightness(100%) !important;
+}
+
+/*PROJECT PAGES*/
+
+.hero{
+    height:100%;
+    min-height:350px;
+    width:100%;
+    background-color:lightgrey;
+}
+
+.project-buttons{
+    margin-top:2rem;
+    display:flex;
+    justify-content: space-between;
+}
+
+.project-buttons a {
+    padding:0.5rem 1.5rem;
+    font-size:1.5rem;
+    border-radius: 5px;
+    width:fit-content;
+    color:var(--sub-color);
+    background-color: var(--main-color);
+}
+
+.project-buttons a:hover {
+    background-color: var(--sub-color);
+    color:var(--main-color);
+    outline:solid 1px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
+}
+
+.projects-title{
+    text-align: center;
+    font-size:5rem;
+    font-weight:800;
+    color:var(--sub-color);
+    background-color:var(--accent-color1);
+    font-style: italic;
+}
 /*ABOUT ME PAGE*/
 
 .contact{
@@ -771,16 +950,26 @@ footer h4{
     .hamburger-icon{
         display:block;
     }
+        
 
 
+}
 
 @media screen and (max-width:540px) {
     #work{
         height:100%;
     }
-
+    
     #menu-scroll{
         overflow: visible;
     }
-}
+
+    .sub-links{
+        flex-direction: column;
+    }
+
+    .sub-links > label{
+        margin: 0.5rem;
+        font-size: 1.5rem !important;
+    }
 }

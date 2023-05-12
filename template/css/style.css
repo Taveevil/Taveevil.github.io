@@ -19,7 +19,7 @@ body{
     overflow-x:hidden;
 }
 
-h1,h3, .nav-title, #work-title{
+h1,h2,h3, .nav-title, #work-title{
     font-family: futura-pt, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -183,6 +183,7 @@ a, label {
 #nav-links{
     justify-content: flex-end;
     background-color: var(--sub-color);
+
 }
 
 .links{
@@ -830,14 +831,60 @@ height:100%;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
 }
 
-.project-title{
-    position: relative;
+.project-title h1{
+    font-size:3rem;
+    font-weight:600;
+    margin:0;
+}
+
+.project-home-title{
     text-align: center;
     color:var(--sub-color);
     background-color:var(--accent-color1);
-    font-style: italic;
-    padding:1rem;
+    padding:1rem 0;
 }
+
+.project-home-title h1{
+    font-size:3rem;
+    font-weight:600;
+    margin:0;
+}
+
+.project-content{
+    margin-top:5%;
+    padding-top:0;
+}
+
+.project-body{
+    padding:2rem 0;
+}
+
+.project-block{
+    width:100%;
+    height:100%;
+    margin:1rem 0;
+}
+
+.project-subtitle{
+    font-size:2.5rem;
+    font-weight:600;
+    margin-top:1rem !important;
+}
+
+.project-body img, .project-body video{
+    max-height:100%;
+    max-width:100%;
+    object-fit: cover;
+    outline:5px var(--main-color) solid;
+    border-radius:20px;
+}
+
+
+    /*CHRIS CLICKER PROJECT PAGE*/
+
+    #chris-link{
+        width:fit-content;
+    }
 
 /*ABOUT ME PAGE*/
 
@@ -850,6 +897,7 @@ height:100%;
 }
 
 .contact h1{
+    margin:1rem 0;
     flex:0 0 auto;
     align-self:flex-start;
 }
@@ -890,7 +938,7 @@ form {
     outline:2px solid var(--main-color);
 }
 
-input[type=text]{
+input[type=email]{
     flex:0 0 auto;
     padding:0.5rem;
     font-size:1rem;
@@ -998,6 +1046,7 @@ footer{
     left:0;
     bottom:0;
     width:100%;
+    padding: 0 1rem;
     height:min-content;
     background-color: var(--main-color);
     color:var(--sub-color);
@@ -1046,6 +1095,10 @@ footer h4{
         flex-direction: column;
         align-items: flex-end;
         border-bottom: solid black 2px;
+    }
+
+    #nav-links{
+        padding-bottom:1rem;
     }
 
     #footer .links{

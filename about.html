@@ -19,7 +19,6 @@
         <div class="solid layer-2 active"></div>
         <div class="solid layer-3 active"></div>
     </div>
-    <div class="dummy-navbar navbar"></div>
     <nav class="autohide navbar navbar-expand-lg">
         <div id="navigation" class="container-fluid g-0">
             <div class="nav-title">
@@ -42,6 +41,7 @@
             </div>
         </div>
     </nav>
+    <div class="dummy-navbar navbar"></div>
 
     <div id="about-me" class="container">
         <div  class="row">
@@ -82,11 +82,11 @@
             <div class="contact col-md-4 col-sm-12">
                 <img id="me-picture" src="template/img/me.jpg">
                 <h1>Say hi!</h1>
-                <form>
+                <form action="https://getform.io/f/9d98ab38-e3ba-47cc-86e5-4204a3faba4d" method="POST">
                     <div class="contact-form">
-                        <input type="text" placeholder="Your e-mail" />
-                        <textarea placeholder="What do you want to talk about?"></textarea>
-                        <input type="submit" value="Send!" />
+                        <input type="email" name="email" placeholder="Your e-mail" required/>
+                        <textarea name="message" placeholder="What do you want to talk about?" required></textarea>
+                        <input type="submit" name="submit" value="Send!" />
                     </div>
                 </form>
             </div>

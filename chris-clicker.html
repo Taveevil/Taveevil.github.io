@@ -35,7 +35,7 @@
             </button>
             <div class="collapse navbar-collapse" id="nav-links">
                 <div class="links">
-                    <a class="projects nav-link" href="/projects/home.htmll">projects</a>
+                    <a class="projects nav-link" href="/projects.html">projects</a>
                     <a class="gallery nav-link" href="/gallery.html">gallery</a>
                     <a class="about nav-link active" href="/about.html">about</a>
                 </div>
@@ -43,27 +43,57 @@
         </div>
     </nav>
     <div class="dummy-navbar navbar"></div>
-    <div id="id" class="container-fluid g-0">
+    <div id="chris-clicker-content" class="container-fluid g-0">
         <div class="row hero g-0">
-            <img src="" alt=""/>
+            <img src="/template/img/projects/chris-clicker/chris-clicker-hero.png" alt=""/>
         </div>
         <div class="project-content container">
         <div class="project-header row">
-            <div class="project-title"><h1>TITLE</h1></div>
-            <div class="project-subtitle"><h2>role on the project</h2></div>
-            <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            hendrerit arcu vel ligula varius vestibulum quis ac lectus. Sed viverra eros
-            et arcu tempor imperdiet. Vestibulum sollicitudin imperdiet magna
-            tristique faucibus. Proin ut egestas erat. Maecenas in tortor ac nisl ultricies
-            congue non quis turpis. Praesent nunc urna, bibendum vel ipsum ut,
-            vulputate placerat orci. Nullam varius commodo placerat. Nulla facilisi.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            hendrerit arcu vel ligula varius vestibulum quis ac lectus. Sed viverra eros
-            et arcu tempor imperdiet.</div>
+            <div class="project-title"><h1>CHRIS CLICKER</h1></div>
+            <div class="project-subtitle"><h2>Role: Designing and programming</h2></div>
+            <div class="project-description"><p>This project was an assignment handed in for my programming logic class. In the assignment, a partner and I were tasked with creating some sort of interactive website with the knowledge we gained throughout the term.</p><p>We came up with the idea to make a "cookie clicker" esque game using our teachers. All of whom are named "Chris" and hence "Chris clicker.</p></div>
+            <a id="chris-link" class="border-button">You can try the game here!</a>
         </div>
-        <div class="project-body row"></div>
+        <div class="project-body row g-0">
+        <div class="project-block">
+            <h2 class="project-subtitle">The Chris's:</h2>
+            <video autoplay muted loop>
+                <source src="template/img/projects/chris-clicker/chris-clicker-intro.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">The mechanics</h2>
+            <p>Collect as many "Chris coins" you can by clicking on the Chris' as fast as possible!</p>
+        </div>
+        <div class="project-block">
+            <video controls="controls" onclick="this.paused ? this.play() : this.pause();">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-gameplay.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">The upgrades</h2>
+            <p>Buy fun Chris themed upgrades that'll help you rack up more Chris coins!</p>
+            <video controls="controls" onclick="this.paused ? this.play() : this.pause();">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-upgrades.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">BONUS MODE</h2>
+            <p>Every so often you'll enter the BONUS MODE and earn more coins within a certain amount of time. So get clicking!</p>
+            <video controls="controls" onclick="this.paused ? this.play() : this.pause();">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-bonus.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">Don't stop!</h2>
+            <p>Chris will remind you to keep going! So that youget the highest amount of Chris coins possible</p>
+            <video controls="controls" onclick="this.paused ? this.play() : this.pause();">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-afk.mp4">
+            </video>
+        </div>
+        </div>
         <div class="project-buttons">
-            <a href="">prev</a>
+            <a href="" style="opacity: 0; cursor:default;">prev</a>
             <a href="/projects.html">go back</a>
             <a href="">next</a>
         </div>

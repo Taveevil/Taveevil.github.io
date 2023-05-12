@@ -9,7 +9,9 @@ document
 //but when we scroll up reveal the navigation bar
 document.addEventListener("DOMContentLoaded", function () {
   autohide = document.querySelector(".autohide");
-
+  hamburger = document.querySelector('.h-icon');
+  hamburger_icon=document.querySelector('.hamburger-icon');
+  nav_links = document.getElementById('nav-links');
   //check if there is a autohide class attached to anything
   if (autohide) {
     //set the top of the last scrolled position to 0
@@ -25,9 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
         autohide.classList.add("scrolled-up");
       }
       //otherwise keep it hidden
-      else {
-        autohide.classList.remove("scrolled-up");
-        autohide.classList.add("scrolled-down");
+      else if (scroll_top > last_scroll_top){     
+        if(hamburger.classList.contains('open')){
+          hamburger.classList.toggle('open');
+          hamburger_icon.classList.toggle('collapsed');
+          nav_links.classList.remove('collapse');
+          nav_links.classList.add('collapsing')
+          setTimeout(() => {
+            nav_links.classList.add('collapse')
+            nav_links.classList.remove('collapsing')
+            nav_links.classList.remove('show')
+            autohide.classList.remove("scrolled-up");
+            autohide.classList.add("scrolled-down");
+          },400)
+        }
+        else{
+          autohide.classList.remove("scrolled-up");
+          autohide.classList.add("scrolled-down");
+        }
       }
       //and then set the last_scroll_top to the new position
       last_scroll_top = scroll_top;
@@ -49,7 +66,7 @@ function openingAnimation() {
 
   //after 900ms create a new source and append it to the video tag
   setTimeout(function () {
-    source.setAttribute("src", "/template/img/Logo.webm");
+    source.setAttribute("src", "/template/img/logo-start.webm");
     source.setAttribute("type", "video/webm");
     video.appendChild(source);
     video.play();
@@ -57,7 +74,7 @@ function openingAnimation() {
     //and loop it
     setTimeout(function () {
       video.pause();
-      source.setAttribute("src", "/template/img/Loop.webm");
+      source.setAttribute("src", "/template/img/logo-loop.webm");
       source.setAttribute("type", "video/webm");
       video.load();
       video.play();
@@ -135,7 +152,7 @@ description_array = [
   "Programs used: Adobe Illustrator, Clip studio EX, Adobe Photoshop",
   "Designs I've made with intentions with either embroidering or printing",
   "Some video I worked on either editing, or producing!",
-  "Motion graphic and titles I did using Adobe aftereffects"
+  "Motion graphic and titles I did using Adobe After Effects"
 ];
 
 for (var i = 0; i < sub_btn.length; i++) {
@@ -202,7 +219,7 @@ for (var i = 0; i < sub_btn.length; i++) {
 }
 
 thumb.forEach((element) => {
-  element.addEventListener("mouseover", () => {
+  element.addEventListener("mouseenter", () => {
     element.classList.add("hovered");
     element.querySelector(".thumb-description").style.display = "block";
     setTimeout(function () {
@@ -212,7 +229,7 @@ thumb.forEach((element) => {
 });
 
 thumb.forEach((element) => {
-  element.addEventListener("mouseout", () => {
+  element.addEventListener("mouseleave", () => {
     element.classList.remove("hovered");
     element.querySelector(".thumb-description").classList.remove("reveal");
     element.querySelector(".thumb-description").style.display = "none";
@@ -277,7 +294,10 @@ var closeAlbum = function () {
 };
 
 function arrowControls(e) {
+  if(album.classList.contains('visible')){
   e.preventDefault();
+  }
+
   if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
     showSlide((slideIndex -= 1));
   }

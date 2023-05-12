@@ -1,0 +1,530 @@
+/*
+font-family: "industry-inc-base", sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: hidden;
+    background-image: url(/template/img/chris-clicker-game/bg.gif);
+    background-size: cover;
+    background-color: #EEC23D;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 2.5%;
+    height: 100%;
+    width: 100%;
+}
+
+#title-chris {
+    background-image: url(/template/img/chris-clicker-game/Chris.png);
+    height: 100%;
+    width: auto;
+    min-width: 200px;
+    margin-right: -1em;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#title-cursor {
+    background-image: url(/template/img/chris-clicker-game/Cursor.gif);
+    height: 100%;
+    width: auto;
+    min-width: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#title-clicker {
+    background-image: url(/template/img/chris-clicker-game/Clicker.png);
+    height: 100%;
+    width: auto;
+    margin-left: -1.5em;
+    min-width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+#score {
+    font-family: "industry-inc-base", sans-serif;
+    color: white;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 2px black;
+    font-size: 4em;
+}
+
+#coinspersec {
+    font-family: "industry-inc-base", sans-serif;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 2px black;
+    font-size: 1em;
+}
+
+#top {
+    position: absolute;
+    left: 0;
+    top: -15%;
+    background-image: url(/template/img/chris-clicker-game/Gradient-Top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+
+#bot {
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    background-image: url(/template/img/chris-clicker-game/Gradient-Bot.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+
+.top-slide-in {
+    animation-name: top-slide-in;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+.top-slide-out {
+    animation-name: top-slide-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes top-slide-in {
+    0% {
+        top: -15%
+    }
+
+    100% {
+        top: 0%
+    }
+}
+
+@keyframes top-slide-out {
+    from {
+        bottom: 0%
+    }
+
+    to {
+        bottom: -15%
+    }
+}
+
+.bot-slide-in {
+    animation-name: bot-slide-in;
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.bot-slide-out {
+    animation-name: bot-slide-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bot-slide-in {
+    from {
+        bottom: -15%
+    }
+
+    to {
+        bottom: 0%
+    }
+}
+
+@keyframes bot-slide-out {
+    from {
+        bottom: 0%
+    }
+
+    to {
+        bottom: -15%
+    }
+}
+
+.flame {
+    position: relative;
+    background-image: url(/template/img/chris-clicker-game/Fire.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 100%;
+    max-height: 300px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 70vw;
+    height: auto;
+}
+
+#centerSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+#subSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#chrisButton {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    height: 100%;
+    min-width: 300px;
+}
+
+
+
+.btn {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    opacity: 0%;
+    z-index: 998;
+}
+
+.chris {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 20px rgb(188, 92, 2));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rocking {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    animation-name: rocking;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rocking {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+#bubble {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    height: 20%;
+    width: 20%;
+    background-image: url(/template/img/chris-clicker-game/bubble.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.afk {
+    animation-name: afk;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes afk {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0%
+    }
+
+    100% {
+        transform: translateY(0%)opacity100
+    }
+}
+
+.not-afk {
+    animation-name: not-afk;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes not-afk {
+    0% {
+        transform: translateY(0%);
+        opacity: 100%
+    }
+
+    100% {
+        transform: translateY(20%);
+        opacity: 0%
+    }
+}
+
+#pointon {
+    background-image: url(/template/img/chris-clicker-game/Pointon.png);
+
+}
+
+#chuckry {
+    background-image: url(/template/img/chris-clicker-game/Chuckry.png);
+}
+
+#brower {
+    background-image: url(/template/img/chris-clicker-game/Brower.png);
+}
+
+.shrink {
+    animation-name: shrink;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+.grow {
+    animation-name: grow;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.upgrades {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    margin-top: 1%;
+    margin-bottom: -1%;
+    width: 100%;
+    min-height: 4em;
+    z-index: 3;
+}
+
+.upgrade {
+    font-family: "industry-inc-base", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 10px;
+    height: em;
+    width: 100%;
+    border: 4px solid black;
+    filter: drop-shadow(0.5em 0.5em 0 black);
+}
+
+.upgrade span {
+    position: relative;
+    z-index: 2;
+}
+
+.upgrade:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #EEC23D;
+    transition: all .2s;
+}
+
+.upgrade:hover {
+    color: #fff;
+}
+
+.upgrade:hover:after {
+    height: 100%;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.cost {
+    font-size: 1.5em;
+}
+
+.score-subtraction {
+    font-family: "industry-inc-base", sans-serif;
+    color: #ff0000;
+    font-size: 2em;
+    position: absolute;
+    opacity: 0;
+    animation-name: fade-in-up;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-in-up {
+
+    0%,
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+}
+
+#plus-one {
+    z-index: 999;
+    position: absolute;
+}
+
+.plus-one {
+    font-family: "industry-inc-base", sans-serif;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 3em;
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: plus-one-fade-in-up;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes plus-one-fade-in-up {
+
+    0%,
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    z-index: -1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#giallo {
+    background-image: url(/template/img/chris-clicker-game/giallo.png);
+}
+
+#networking {
+    background-image: url(/template/img/chris-clicker-game/network.png);
+}
+
+#ill {
+    background-image: url(/template/img/chris-clicker-game/Ill.png);
+}
+
+.icon-active {
+    animation-name: icon-active;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+.icon-inactive {
+    animation-name: icon-inactive;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes icon-active {
+    0% {
+        transform: translateY(0%);
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 25%;
+    }
+
+    100% {
+        transform: translateY(-120%);
+        opacity: 100%;
+    }
+}
+
+@keyframes icon-inactive {
+    0% {
+        transform: translateY(-120%);
+        opacity: 100%;
+    }
+
+    25% {
+        opacity: 5%;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 0%;
+    }
+}
+
+
+
+span {
+    position: fixed;
+}

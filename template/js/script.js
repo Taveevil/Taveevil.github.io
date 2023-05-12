@@ -356,3 +356,22 @@ function showSlide(n) {
   slides[slideIndex - 1].style.display = "flex";
   modalPreviews[slideIndex - 1].className += " active";
 }
+
+var v = document.querySelectorAll('.video');
+v.forEach(e =>{
+  addEventListener(
+  'play', 
+  function() { 
+      e.play();
+  }, 
+  false);
+
+e.onclick = function() {
+  if (e.paused) {
+      e.play();
+  } else {
+      e.pause();
+  }
+
+  return false;
+};})

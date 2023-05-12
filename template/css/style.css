@@ -800,11 +800,13 @@ height:100%;
 .hero{
     height:100%;  
     width:100%;
+    
     background-color:lightgrey;
 }
 
 .hero img{
-    object-fit: fill;
+    object-fit:cover;
+    min-height:300px;
     height:100%;
     width:100%;
 }

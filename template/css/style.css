@@ -203,15 +203,15 @@ a, a:link, a:visited{
 }
 
 .projects.active{
-    color:var(--accent-color1);
+    color:var(--accent-color1) !important;
 }
 
 .gallery.active{
-    color:var(--accent-color3)
+    color:var(--accent-color3) !important;
 }
 
-.work.active{
-    color:var(--accent-color2)
+.about.active{
+    color:var(--accent-color2) !important;
 }
 
 .projects:hover {

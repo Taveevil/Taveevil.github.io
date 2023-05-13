@@ -47,7 +47,7 @@ a, label {
 }
 
 .container{
-    padding:10%;
+    padding:5%;
 }
 
 .seperator{
@@ -525,13 +525,13 @@ a, a:link, a:visited{
     position:relative;
     display:flex;
     justify-content: flex-end;
-    min-height:400px;
+    min-height:600px;
     flex-direction:column;
     border-radius:20px;
     background-color:grey;
     padding:1rem;
     overflow:hidden;
-    margin:0.5rem 0;
+    margin:1rem 0;
     opacity:100%;
     z-index:4;
     transition: all 300ms ease-in-out;

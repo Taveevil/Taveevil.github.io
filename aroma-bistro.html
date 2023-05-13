@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +11,16 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Welcome!</title>
 </head>
-
 <body>
-
     <div class="loading-screen">
         <div class="solid layer-1 active"></div>
         <div class="solid layer-2 active"></div>
         <div class="solid layer-3 active"></div>
     </div>
-
     <nav class="autohide navbar navbar-expand-lg">
         <div id="navigation" class="container-fluid g-0">
             <div class="nav-title">
-                <a href="/index.html"><img src="/template/img/tav-black.svg"></a>
+                <a href="/index.html"><img src="template/img/tav-black.svg"></a>
             </div>
             <button class="hamburger-icon navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#nav-links">
@@ -38,82 +34,68 @@
                 <div class="links">
                     <a class="projects nav-link" href="/projects.html">projects</a>
                     <a class="gallery nav-link" href="/gallery.html">gallery</a>
-                    <a class="about nav-link" href="/about.html">about</a>
+                    <a class="about nav-link active" href="/about.html">about</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="dummy-navbar navbar"></div>
-    <div id="home" class="container-fluid">
-        <div class="opening-title">
-            <h4>Hi there! my name is Tavee Villamar or you can call me...</h4>
+    <div id="chris-clicker-content" class="container-fluid g-0">
+        <div class="row hero g-0">
+            <img src="/template/img/projects/aroma-bistro/aroma-bistro-hero.png" alt=""/>
         </div>
-        <div class="animations">
-            <video id="opening-animation" autoplay muted>
-                <img src="/template/img//logo-loop.gif" alt="my personal logo and name TAV">
+        <div class="project-content container">
+        <div class="project-header row">
+            <div class="project-title"><h1>Aroma Bistro web design</h1></div>
+            <div class="project-subtitle"><h2>Role: designing</h2></div>
+            <div class="project-description"><p>This project was an assignment handed in for my programming logic class. In the assignment, a partner and I were tasked with creating some sort of interactive website with the knowledge we gained throughout the term.</p><p>We came up with the idea to make a "cookie clicker" esque game using our teachers. All of whom are named "Chris" and hence "Chris clicker.</p></div>
+            <a id="chris-link" class="border-button external" href="chris-clicker-game.html" target="_blank">You can try the game here!</a>
+        </div>
+        <div class="project-body row g-0">
+        <div class="project-block">
+            <h2 class="project-subtitle">The Chris's:</h2>
+            <video autoplay muted loop>
+                <source src="template/img/projects/chris-clicker/chris-clicker-intro.mp4">
             </video>
-            <div class="scroll">
-                <p class="marquee">
-                    <span>BASED IN WINNIPEG, MANITOBA
-                    </span>
-                </p>
-                <p class="marquee reverse">
-                    <span>BASED IN WINNIPEG, MANITOBA
-                    </span>
-                </p>
-            </div>
         </div>
-        <div class="buttons">
-            <a href="/projects.html" id="work-button" class="solid-button">See my work</a>
-            <a href="/about.html" id="about-button" class="border-button">Get to know me</a>
+        <div class="project-block">
+            <h2 class="project-subtitle">The mechanics</h2>
+            <p>Collect as many "Chris coins" you can by clicking on the Chris' as fast as possible!</p>
         </div>
-        <h2>My latest projects!</h2>
-        <div class="latest-projects row">
-            <div class="col-3 thumbnail illustrations">
-                <a class="album-trigger external" href="#">
-                    <img class="thumb-img" src="/template/img/projects/chris-clicker/chris-clicker-thumbnail.png"
-                        alt="Chris clicker logo with the faces of the chris' in the game">
-                        <div class="thumb-copy">
-                            <h4>Chris Clicker</h4>
-                            <p>2023 - April</p>
-                            <div class="thumb-description">
-                                <p>A project I developed with a partner for my programming logic class</p>
-                            </div>
-                        </div>
-                    </img>
-                </a>
-            </div>
-            <div class="col-3 thumbnail illustrations">
-                <a class="album-trigger external" href="#">
-                    <img class="thumb-img" src="/template/img/projects/pleasant-valley/pleasant-valley-thumbnail.png"
-                        alt="Aroma bistro thumbnail with the logo in the center">
-                        <div class="thumb-copy">
-                            <h4>Aroma Bistro web design</h4>
-                            <p>2023 - March</p>
-                            <div class="thumb-description">
-                                <p>A project I designed for my webdesign 2 class</p>
-                            </div>
-                        </div>
-                </a>
-            </div>
-            <div class="col-3 thumbnail apparel">
-                <a class="album-trigger external" href="#">
-                    <img class="thumb-img"
-                        src="/template/img/projects/aroma-bistro/aroma-bistro-thumbnail.png"
-                        alt="Pleasant valley logo">
-                        <div class="thumb-copy">
-                            <h4>Deep dish delivery</h4>
-                            <p>2021 - April</p>
-                            <div class="thumb-description">
-                                <p>Ludum Dare 48 entry</p>
-                            </div>
-                        </div>
-                    </img>
-                </a>
-            </div>
+        <div class="project-block">
+            <video controls="controls" class="video">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-gameplay.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">The upgrades</h2>
+            <p>Buy fun Chris themed upgrades that'll help you rack up more Chris coins!</p>
+            <video controls="controls" class="video">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-upgrades.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">BONUS MODE</h2>
+            <p>Every so often you'll enter the BONUS MODE and earn more coins within a certain amount of time. So get clicking!</p>
+            <video controls="controls" class="video">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-bonus.mp4">
+            </video>
+        </div>
+        <div class="project-block">
+            <h2 class="project-subtitle">Don't stop!</h2>
+            <p>Chris will remind you to keep going! So that you get the highest amount of Chris coins possible</p>
+            <video controls="controls" class="video">
+                <source src="/template/img/projects/chris-clicker/chris-clicker-afk.mp4">
+            </video>
+        </div>
+        </div>
+        <div class="project-buttons">
+            <a href="/chris-clicker.html"">prev</a>
+            <a href="/projects.html">go back</a>
+            <a href="">next</a>
+        </div>
         </div>
     </div>
-
 
     <footer>
         <div id="footer" class="container-fluid">
@@ -124,7 +106,7 @@
                     <div class="seperator"></div>
                     <div id="footer-navlinks" class="footer-links links">
                         <a href="/index.html">home</a>
-                        <a href="/projects.html">projects</a>
+                        <a href="/projects/home.html">projects</a>
                         <a href="/gallery.html">about</a>
                         <a href="/work.html">work</a>
                     </div>
@@ -147,7 +129,7 @@
                     <div class="seperator"></div>
                     <div id="footer-contact" class="footer-links links">
                         <h4><strong>E-mail:</strong></h4>
-                        <a href="mailto:hello@tavee.ca" class="external">hello@tavee.ca</a>
+                        <a href="mailto:hello.tavee.ca" class="external">hello@tavee.ca</a>
                     </div>
                     <div class="seperator"></div>
                 </div>

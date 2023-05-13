@@ -184,24 +184,25 @@ for (var i = 0; i < sub_btn.length; i++) {
       //map makes another array of only ids from the "i" argument
       //and returns the postion based off what this.id is
       const index = sub_array.map((i) => i.id).indexOf(this.id);
-      var buttons = document.getElementById('work-buttons');
+
+      var buttons = document.querySelector('#work-buttons');
       if (index < 3 && index > 0){
-        buttons.querySelector('#instagram-button').style.display = 'block';
-        buttons.querySelector('#contact-button').style.display = 'none';
-        buttons.querySelector('#youtube-button').style.display = 'none';
-        buttons.querySelector('#tiktok-button').style.display = 'none';
+        buttons.querySelector('.instagram-button').style.display = 'block';
+        buttons.querySelector('.contact-button').style.display = 'none';
+        buttons.querySelector('.youtube-button').style.display = 'none';
+        buttons.querySelector('.tiktok-button').style.display = 'none';
       }
       else if (index >= 3){
-        buttons.querySelector('#instagram-button').style.display = 'none';
-        buttons.querySelector('#contact-button').style.display = 'none';
-        buttons.querySelector('#youtube-button').style.display = 'block';
-        buttons.querySelector('#tiktok-button').style.display = 'block';
+        buttons.querySelector('.instagram-button').style.display = 'none';
+        buttons.querySelector('.contact-button').style.display = 'none';
+        buttons.querySelector('.youtube-button').style.display = 'block';
+        buttons.querySelector('.tiktok-button').style.display = 'block';
       }
       else if (index == 0){
-        buttons.querySelector('#instagram-button').style.display = 'none';
-        buttons.querySelector('#contact-button').style.display = 'block';
-        buttons.querySelector('#youtube-button').style.display = 'none';
-        buttons.querySelector('#tiktok-button').style.display = 'none';
+        buttons.querySelector('.instagram-button').style.display = 'none';
+        buttons.querySelector('.contact-button').style.display = 'block';
+        buttons.querySelector('.youtube-button').style.display = 'none';
+        buttons.querySelector('.tiktok-button').style.display = 'none';
       }
 
       work_copy.classList.add("fade-left");

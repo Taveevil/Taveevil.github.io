@@ -19,31 +19,33 @@ body{
     overflow-x:hidden;
 }
 
-h1,h2,h3, .nav-title, #work-title{
+h1,h2,h3, #work-title{
     font-family: futura-pt, sans-serif;
     font-weight: 800;
     font-style: normal;
+    font-size:clamp(4vw,4rem,12vw);
 }
 
 h3{
-    font-size:1.5rem;
+    font-size:clamp(3vw,2rem,10vw);
 }
 
 h4, #work-sub{
-    font-size:1rem;
+    font-size:clamp(1vw,2rem,8vw);
 }
 
 p, #work-desciption{
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size:clamp(2vh,1rem,5vw);
+    font-size:clamp(1vw,1rem,6vw);
 }
 
 a, label {
     font-family: futura-pt, sans-serif;
     font-weight: 600;
     font-style: normal;
+    font-size:clamp(1vw,1.5rem,8vw);
 }
 
 .container{
@@ -156,8 +158,8 @@ a, label {
 
 .nav-title{
     display:flex;
-    width:20vw;
-    max-width:70px;
+    width:25vw;
+    max-width:100px;
     height:100%;
     margin:auto 1rem;
     text-decoration: none;
@@ -183,14 +185,13 @@ a, label {
 #nav-links{
     justify-content: flex-end;
     background-color: var(--sub-color);
-
+    padding:1rem;
 }
 
 .links{
     display:flex;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5rem;
 }
 
 a, a:link, a:visited{
@@ -353,7 +354,6 @@ a, a:link, a:visited{
 }
 
 .opening-title{
-    font-size:2rem;
     text-align:center;
     transform:translateY(5vh);
 }
@@ -470,14 +470,10 @@ a, a:link, a:visited{
     transition: all 200ms ease-in-out;
 }
 
-#work-title{
-    font-size:2rem;
-}
-
 #work-sub{
     color:var(--accent-color2);
     font-weight:600;
-    font-size:1rem;
+    
 }
 
 #work-buttons{
@@ -564,6 +560,10 @@ a, a:link, a:visited{
     filter: drop-shadow(2px 3px 2px black);
 }
 
+.thumb-copy h4{
+    font-size:clamp(2.5vw,3rem,3vw);
+}
+
 .thumb-description{
     display:none;
     opacity:0%;
@@ -612,7 +612,6 @@ a, a:link, a:visited{
 #sub-nav label{
     position: relative;
     cursor:pointer;
-    font-size:1rem;
     text-align: center;
     color:var(--sub-color);
     background-color: transparent;
@@ -706,7 +705,6 @@ a, a:link, a:visited{
     top:0;
     right:0;
     margin:1rem;
-    font-size:2rem;
     color:white !important;
 }
 
@@ -819,7 +817,6 @@ height:100%;
 
 .project-buttons a {
     padding:0.5rem 1.5rem;
-    font-size:1.5rem;
     border-radius: 5px;
     width:fit-content;
     color:var(--sub-color);
@@ -834,7 +831,6 @@ height:100%;
 }
 
 .project-title h1{
-    font-size:3rem;
     font-weight:600;
     margin:0;
 }
@@ -847,7 +843,6 @@ height:100%;
 }
 
 .project-home-title h1{
-    font-size:3rem;
     font-weight:600;
     margin:0;
 }
@@ -868,7 +863,6 @@ height:100%;
 }
 
 .project-subtitle{
-    font-size:2.5rem;
     font-weight:600;
     margin-top:1rem !important;
 }
@@ -1058,9 +1052,7 @@ footer h3{
     margin-top: 0.5rem;
 }
 
-footer h4{
-    font-size:1rem;
-}
+
 
 .footer-links a{
     text-decoration: none;
@@ -1099,9 +1091,6 @@ footer h4{
         border-bottom: solid black 2px;
     }
 
-    #nav-links{
-        padding-bottom:1rem;
-    }
 
     #footer .links{
         align-items:flex-start;

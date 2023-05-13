@@ -225,11 +225,11 @@ a, a:link, a:visited{
 }
 
 .gallery:hover{
-    color: var(--accent-color2) !important;
+    color: var(--accent-color3) !important;
 }
 
 .about:hover{
-    color: var(--accent-color3) !important;
+    color: var(--accent-color2) !important;
 }
 
 .projects:hover, .gallery:hover, .about:hover{
@@ -895,7 +895,7 @@ height:100%;
 .contact{
     display:flex;
     flex-direction:column;
-    align-items: center;
+    align-items:flex-start;
     height:auto;
     width:100%;
 }

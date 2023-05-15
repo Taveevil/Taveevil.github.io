@@ -26,7 +26,7 @@ h1,h2,h3, #work-title, a, label{
 }
 
 h1{
-    font-size:clamp(4vh,6rem,12vw) !important;
+    font-size:clamp(4vh,4rem,12vw) !important;
 }
 
 h2{
@@ -805,7 +805,6 @@ height:100%;
 .hero{
     height:100%;  
     width:100%;
-    
     background-color:lightgrey;
 }
 
@@ -860,10 +859,14 @@ height:100%;
 }
 
 .project-body{
+    justify-content: center;
     padding:4rem 0;
 }
 
 .project-block{
+    flex-direction: column;
+    display:flex;
+    position:relative;
     width:100%;
     height:100%;
     margin:3rem 0;
@@ -871,12 +874,13 @@ height:100%;
 
 .project-subtitle{
     font-weight:600;
-    margin-top:1rem !important;
+
 }
 
 .project-body img, .project-body video{
     max-height:100%;
     max-width:100%;
+    vertical-align:middle;
     object-fit: cover;
     outline:var(--outline-width) var(--main-color) solid;
     border-radius:20px;
@@ -885,10 +889,106 @@ height:100%;
 
     /*CHRIS CLICKER PROJECT PAGE*/
 
-    #chris-link{
-        width:fit-content;
+    .visit-link{
         padding:1rem;
     }
+
+    /* AROMA BISTRO PROJECT PAGE*/
+    #aroma-bistro-content img {
+        outline:none !important;
+    }
+
+    #phone-section{
+        justify-content: center;
+        background-image:url(/template/img/projects/aroma-bistro/aroma-bistro-background.png);
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+
+    #aroma-bistro-content .project-block{
+        flex-direction:row;
+    }
+
+    .phone-wrapper{
+        display:flex;
+        position:relative;
+        overflow:visible;
+        max-width:40% !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:3rem;
+    }
+
+    .phone-content-wrapper{
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        position: absolute;
+        top: 1%;
+        bottom: 1%;
+        left: 7%;
+        right: 7%;
+    }
+
+    .phone-content-container{
+        z-index: 2;
+        width: 92%;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: clamp(45px,1vw,10px);
+        margin-left: 0;
+        display: block;
+        position: static;
+        top: 6%;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        overflow-y: scroll;
+    }
+
+    .phone{
+        position:relative;
+        z-index:1;
+        max-width:none;
+        width:90%;
+        background-color:rgb(56, 56, 56);
+        border-radius:70px !important;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
+    }
+
+    .phone-image{
+        z-index: 0;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        top: 0%;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
+
+    
+    .phone-content-container::-webkit-scrollbar {
+    display:none;             
+  }
+
+  .scroll-me{
+    display:block;
+  }
+
+  .scroll-me img{
+    max-height:25%;
+    object-fit:contain;
+  }
+
+  .scroll-me-mobile{
+    display:none;
+  }
 
 /*ABOUT ME PAGE*/
 
@@ -1110,11 +1210,35 @@ footer h3{
         display:block;
     }     
 
+    #phone-section{
+        min-height:600px;
+        background-image:none;
+    }
+    
+    .scroll-me{
+        display:none;
+    }
+
+    .scroll-me-mobile{
+        display:block;
+        height:100%;
+        text-align: center;
+    }
+
+    .phone-wrapper{
+        min-width:100% !important;
+    }
+
+
 }
 
 @media screen and (max-width:540px) {
     #work{
         height:100%;
+    }
+
+    .project-header{
+        padding:2rem;
     }
     
     #menu-scroll{

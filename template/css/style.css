@@ -836,6 +836,10 @@ height:100%;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
 }
 
+.project-header{
+    margin-bottom:4rem;
+}
+
 .project-title{
     font-weight:600;
     margin:0;
@@ -860,11 +864,11 @@ height:100%;
 
 .project-body{
     justify-content: center;
-    padding:4rem 0;
 }
 
 .project-block{
     flex-direction: column;
+    justify-content: center;
     display:flex;
     position:relative;
     width:100%;
@@ -872,29 +876,37 @@ height:100%;
     margin:3rem 0;
 }
 
-.project-subtitle{
-    font-weight:600;
+.project-block > *{
+    padding:0 !important;
+}
 
+.project-subtitle{
+    font-weight:500;
+    margin-bottom:2rem;
+}
+
+.visit-link{
+    padding:1rem;
+    margin-top:1rem !important;
 }
 
 .project-body img, .project-body video{
-    max-height:100%;
-    max-width:100%;
+    max-height:100vh;
+    max-width:fit-content;
     vertical-align:middle;
-    object-fit: cover;
+    object-fit:contain;
     outline:var(--outline-width) var(--main-color) solid;
     border-radius:20px;
 }
 
 
-    /*CHRIS CLICKER PROJECT PAGE*/
 
-    .visit-link{
-        padding:1rem;
-    }
+    /*CHRIS CLICKER PROJECT PAGE*/
 
     /* AROMA BISTRO PROJECT PAGE*/
     #aroma-bistro-content img {
+        max-height:100% !important;
+        max-width:100% !important;
         outline:none !important;
     }
 
@@ -955,7 +967,7 @@ height:100%;
         max-width:none;
         width:90%;
         background-color:rgb(56, 56, 56);
-        border-radius:70px !important;
+        border-radius:60px !important;
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.568));
     }
 
@@ -982,13 +994,32 @@ height:100%;
   }
 
   .scroll-me img{
-    max-height:25%;
+    max-height:25% !important;
     object-fit:contain;
   }
 
   .scroll-me-mobile{
     display:none;
   }
+
+  /*COMMANDER BROUT PAGE*/
+
+  #commander-brout-content .project-block{
+    flex-direction:row;
+  }
+
+  #elements{
+    justify-content: space-around;
+  }
+
+  #elements img{
+    padding:1rem !important;
+    margin:1rem;
+    max-width:100%;
+    max-height:100%;
+    object-fit: contain;
+  }
+
 
 /*ABOUT ME PAGE*/
 

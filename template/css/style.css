@@ -867,8 +867,12 @@ height:100%;
     justify-content: center;
 }
 
-.pictures{
+.pictures {
     justify-content: space-around !important;
+}
+
+.pictures > img{
+    margin: 1rem 0 !important;
 }
 
 .project-block{
@@ -904,6 +908,9 @@ height:100%;
     border-radius:20px;
 }
 
+.gallery-lower{
+    display:flex;
+}
 
 
     /*CHRIS CLICKER PROJECT PAGE*/
@@ -1025,6 +1032,12 @@ height:100%;
     object-fit: contain;
   }
 
+  /*DEEP DISH DELIVERY*/
+
+  #ddd{
+    display:flex;
+    background-color:transparent;
+  }
 
 /*ABOUT ME PAGE*/
 
@@ -1264,6 +1277,9 @@ footer h3{
     .phone-wrapper{
         min-width:100% !important;
     }
+    .thumbnail{
+        min-height:250px !important;
+    }
 
 
 }
@@ -1293,4 +1309,6 @@ footer h3{
     .latest-projects{
         flex-direction: column;
     }
+
+
 }

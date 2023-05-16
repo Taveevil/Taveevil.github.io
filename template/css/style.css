@@ -450,13 +450,6 @@ a, a:link, a:visited{
     padding:1rem;
 }
 
-/* PROJECTS PAGE */
-
-#projects{
-    display:flex;
-    justify-content: space-evenly;
-}
-
 
 
 /* GALLERY PAGE */
@@ -802,6 +795,12 @@ height:100%;
 
 /*PROJECT PAGES*/
 
+
+#projects{
+    display:flex;
+    justify-content: space-evenly;
+}
+
 .hero{
     height:100%;  
     width:100%;
@@ -864,6 +863,10 @@ height:100%;
 
 .project-body{
     justify-content: center;
+}
+
+.pictures{
+    justify-content: space-around !important;
 }
 
 .project-block{

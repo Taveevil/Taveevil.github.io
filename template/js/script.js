@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         autohide.classList.add("scrolled-up");
       }
       //otherwise keep it hidden
-      else if (scroll_top > last_scroll_top){     
+      else if (scroll_top > last_scroll_top || scroll_top == 0){     
         if(hamburger.classList.contains('open')){
           hamburger.classList.toggle('open');
           hamburger_icon.classList.toggle('collapsed');

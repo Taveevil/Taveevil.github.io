@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let scroll_top = window.scrollY;
       //if scroll_top is less than the previous position
       //then reveal the navbar
-      if (scroll_top < last_scroll_top) {
+      if (scroll_top < last_scroll_top || scroll_top < 10) {
         autohide.classList.remove("scrolled-down");
         autohide.classList.add("scrolled-up");
       }
       //otherwise keep it hidden
-      else if (scroll_top > last_scroll_top || scroll_top == 0){     
+      else if (scroll_top > last_scroll_top){     
         if(hamburger.classList.contains('open')){
           hamburger.classList.toggle('open');
           hamburger_icon.classList.toggle('collapsed');

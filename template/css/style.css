@@ -361,6 +361,7 @@ a, a:link, a:visited{
 .opening-title{
     text-align:center;
     transform:translateY(5vh);
+    padding:0 1rem;
 }
 
 #opening-animation{
@@ -395,6 +396,7 @@ a, a:link, a:visited{
     justify-content: center;
     margin-top:-5%;
     margin-bottom:5%;
+    padding:0 1rem;
 }
 
 #about-content .seperator{

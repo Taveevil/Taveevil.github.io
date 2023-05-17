@@ -424,7 +424,7 @@ a, a:link, a:visited{
 .solid-button,
 .border-button{
     text-align:center;
-    padding:1rem 2rem;
+    padding:1rem 2rem !important;
     border-radius: 20px;
     transition:all 200ms ease-in-out;
 }
@@ -816,6 +816,10 @@ height:100%;
     width:100%;
 }
 
+.project-body{
+    justify-content: center;
+}
+
 .project-buttons{
     margin-top:2rem;
     display:flex;
@@ -863,16 +867,8 @@ height:100%;
     padding-top:0;
 }
 
-.project-body{
-    justify-content: center;
-}
-
 .pictures {
     justify-content: space-around !important;
-}
-
-.pictures > img{
-    margin: 1rem 0 !important;
 }
 
 .project-block{
@@ -887,6 +883,15 @@ height:100%;
 
 .project-block > *{
     padding:0 !important;
+}
+
+.project-block .row > *{
+    padding:0 !important;
+}
+
+.project-block .row{
+    justify-content: center;
+    margin:0;
 }
 
 .project-subtitle{
@@ -906,6 +911,10 @@ height:100%;
     object-fit:contain;
     outline:var(--outline-width) var(--main-color) solid;
     border-radius:20px;
+}
+
+.pictures img{
+    margin:1rem;
 }
 
 .gallery-lower{
@@ -1016,7 +1025,7 @@ height:100%;
 
   /*COMMANDER BROUT PAGE*/
 
-  #commander-brout-content .project-block{
+  #commander-brout-content.project-block{
     flex-direction:row;
   }
 

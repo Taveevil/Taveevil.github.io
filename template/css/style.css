@@ -917,6 +917,10 @@ height:100%;
     border-radius:20px;
 }
 
+.project-body video{
+    padding:0;
+}
+
 .pictures img{
     margin:1rem;
 }

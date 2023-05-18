@@ -1293,10 +1293,11 @@ footer h3{
     .phone-wrapper{
         min-width:100% !important;
     }
-    .thumbnail{
-        min-height:250px !important;
-    }
 
+    .thumbnail{
+        min-height:300px !important;
+        max-height:300px !important;
+    }
 
 }
 
@@ -1305,6 +1306,9 @@ footer h3{
         height:100%;
     }
 
+    .thumbnail{
+        min-height:250px !important;
+    }
    
     
     #menu-scroll{

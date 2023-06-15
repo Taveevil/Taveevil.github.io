@@ -574,7 +574,7 @@ a, a:link, a:visited{
     display:none;
     opacity:0%;
     transition:all 300ms ease-in-out;
-    transform:translateY(10%)
+    transform:translateY(10%);
 }
 
 .sub-links{

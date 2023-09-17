@@ -1,3 +1,4 @@
+
 //When the hamburger icon is clicked toggle the drop down menu
 document
   .querySelector(".hamburger-icon")
@@ -66,7 +67,7 @@ function openingAnimation() {
 
   //after 900ms create a new source and append it to the video tag
   setTimeout(function () {
-    source.setAttribute("src", "/template/img/logo-start.webm");
+    source.setAttribute("src", "template/img/logo-start.webm");
     source.setAttribute("type", "video/webm");
     video.appendChild(source);
     video.play();
@@ -74,7 +75,7 @@ function openingAnimation() {
     //and loop it
     setTimeout(function () {
       video.pause();
-      source.setAttribute("src", "/template/img/logo-loop.webm");
+      source.setAttribute("src", "template/img/logo-loop.webm");
       source.setAttribute("type", "video/webm");
       video.load();
       video.play();
@@ -376,3 +377,40 @@ e.onclick = function() {
 
   return false;
 };})
+
+
+function ajax_call(the_event, this_element, some_id) {
+  //What happens immediately when then button is clicked
+
+  var str_url = ' process/get-id.php?id=' + some_id;
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function () {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+              var response = req.responseText;
+
+              //this runs after the server is done
+              setTimeout(() => {
+
+                  if(button_1){
+                      label.innerHTML="fuck u";
+                  }
+                  if(button_2){
+                      label.innerHTML = response;
+                  }
+                  
+                  this_element.classList.add("success");
+                  bat.classList.add("reveal");
+                  bat.classList.remove("hidden");
+              }, 2000);
+
+          }
+          else {
+              child.innerHTML = 'Update could not be pushed';
+          }
+      }
+  }
+
+  req.open("GET", str_url, true);
+  req.send();
+}

@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/template/css/chris.css">
+    <link rel="stylesheet" href="<?php echo $template_url ?>css/chris.css">
     <link rel="stylesheet" href="https://use.typekit.net/xdf3nhu.css">
-    <link rel="icon" type="image/x-icon" href="/template/img/chris-clicker-game/Cursor.gif">
+    <link rel="icon" type="image/x-icon" href="<?php echo $template_url ?>img/chris-clicker-game/Cursor.gif">
     <title>Chris Clicker</title>
 </head>
 <body>
@@ -66,6 +66,6 @@
         </div>
         <div class="" id="bot"></div>
     </div>
-    <script src="template/js/chris.js"></script>
+    <script src="<?php echo $template_url ?>js/chris.js"></script>
 </body>
 </html>

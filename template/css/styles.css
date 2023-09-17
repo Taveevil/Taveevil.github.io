@@ -152,8 +152,6 @@ a, label {
     z-index:1;  
 }
 
-
-
 .navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -380,14 +378,14 @@ a, a:link, a:visited{
     background-position: center;
     background-repeat: no-repeat;
     background-size:contain;
-    background-image: url(/template/img/LogoStart.gif);
+    background-image: url(<?php echo $template_url ?>img/LogoStart.gif);
 }
 
 .anim-loop{
     background-position: center;
     background-repeat: no-repeat;
     background-size:contain;
-    background-image: url(/template/img/LogoLoop.gif);
+    background-image: url(<?php echo $template_url ?>img/LogoLoop.gif);
 }
 
 
@@ -941,7 +939,7 @@ height:100%;
 
     #phone-section{
         justify-content: center;
-        background-image:url(/template/img/projects/aroma-bistro/aroma-bistro-background.png);
+        background-image:url(<?php echo $template_url ?>img/projects/aroma-bistro/aroma-bistro-background.png);
         background-position:center;
         background-repeat:no-repeat;
         background-size:contain;

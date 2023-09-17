@@ -12,7 +12,7 @@ font-style: normal;
 
 body {
     overflow-y: hidden;
-    background-image: url(/template/img/chris-clicker-game/bg.gif);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/bg.gif);
     background-size: cover;
     background-color: #EEC23D;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 #title-chris {
-    background-image: url(/template/img/chris-clicker-game/Chris.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Chris.png);
     height: 100%;
     width: auto;
     min-width: 200px;
@@ -39,7 +39,7 @@ body {
 }
 
 #title-cursor {
-    background-image: url(/template/img/chris-clicker-game/Cursor.gif);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Cursor.gif);
     height: 100%;
     width: auto;
     min-width: 100px;
@@ -50,7 +50,7 @@ body {
 
 
 #title-clicker {
-    background-image: url(/template/img/chris-clicker-game/Clicker.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Clicker.png);
     height: 100%;
     width: auto;
     margin-left: -1.5em;
@@ -82,7 +82,7 @@ body {
     position: absolute;
     left: 0;
     top: -15%;
-    background-image: url(/template/img/chris-clicker-game/Gradient-Top.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Gradient-Top.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -94,7 +94,7 @@ body {
     position: absolute;
     left: 0;
     bottom: -15%;
-    background-image: url(/template/img/chris-clicker-game/Gradient-Bot.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Gradient-Bot.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -169,7 +169,7 @@ body {
 
 .flame {
     position: relative;
-    background-image: url(/template/img/chris-clicker-game/Fire.gif);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Fire.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -204,7 +204,7 @@ body {
 
 #chrisButton {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-<?php echo $template_url ?>-columns: 1fr;
     width: auto;
     height: 100%;
     min-width: 300px;
@@ -255,7 +255,7 @@ body {
     left: 65%;
     height: 20%;
     width: 20%;
-    background-image: url(/template/img/chris-clicker-game/bubble.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/bubble.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -296,16 +296,16 @@ body {
 }
 
 #pointon {
-    background-image: url(/template/img/chris-clicker-game/Pointon.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Pointon.png);
 
 }
 
 #chuckry {
-    background-image: url(/template/img/chris-clicker-game/Chuckry.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Chuckry.png);
 }
 
 #brower {
-    background-image: url(/template/img/chris-clicker-game/Brower.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Brower.png);
 }
 
 .shrink {
@@ -468,15 +468,15 @@ body {
 }
 
 #giallo {
-    background-image: url(/template/img/chris-clicker-game/giallo.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/giallo.png);
 }
 
 #networking {
-    background-image: url(/template/img/chris-clicker-game/network.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/network.png);
 }
 
 #ill {
-    background-image: url(/template/img/chris-clicker-game/Ill.png);
+    background-image: url(<?php echo $template_url ?>img/chris-clicker-game/Ill.png);
 }
 
 .icon-active {

@@ -149,7 +149,6 @@ function update_list(x) {
 let page_left = document.querySelector(".page-left");
 let page_right = document.querySelector(".page-right");
 
-
 if(game_list){
     update_list();
     
